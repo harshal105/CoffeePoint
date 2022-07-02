@@ -7,8 +7,20 @@ const CoffeeSchema = new mongoose.Schema({
     country: {
         type: String
     },
+    date: {
+        type: Number
+    },
+    picture: {
+        type: String
+    },
+    howToMake: {
+        type: String
+    },
+    infoVideo: {
+        type: String
+    }
+
 })
 
 const CoffeeModel = mongoose.model("coffee", CoffeeSchema);
-
 module.exports = CoffeeModel;
