@@ -3,6 +3,7 @@ import "./App.css"
 import Header from "./components/Header/Header";
 import SearchArea from "./components/SearchArea/SearchArea";
 import FunctionButton from "./components/FunctionButton/FunctionButton";
+import CoffeeCard from "./components/CoffeeCard/CoffeeCard";
 
 function App() {
   return (
@@ -23,8 +24,7 @@ function App() {
           name="Delete"
         />
       </div>
-      
-
+      <CoffeeCard /> 
     </div>
   );
 }

@@ -1,0 +1,34 @@
+.CoffeeCard{
+    border:3px solid #634242;
+    width: 90%;
+    height: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.CoffeePicture{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.CoffeeInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+    margin:0;
+    border:0;
+}
+
+
+.PicDiv{
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
