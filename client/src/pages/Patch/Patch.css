@@ -1,0 +1,30 @@
+.patchHeader{
+    padding-top: 2%;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.patchIntro{
+    padding-top: 3%;
+}
+
+.changeInput{
+    display: flex;
+    justify-content: center;
+}
+
+.coffeePatchInput{
+    height: 50%;
+    margin-left: 2%;
+    text-align: center;
+    border:2px solid #634242;
+    background-color: #ECDECE;
+    color: #634242;
+    font-weight:600;
+
+}
+
+.coffeePatchInput:focus { 
+    outline:none;
+    border-color: #634242;
+ }

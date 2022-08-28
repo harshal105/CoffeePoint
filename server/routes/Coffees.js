@@ -3,6 +3,7 @@ const router = express.Router();
 const CoffeeModel = require("../models/Coffee");
 
 router
+    //main route for operations pertaining to all coffees
     .route("/")
 
     .get((req,res) => {
