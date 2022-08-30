@@ -5,8 +5,6 @@ import CrudButton from "../../components/CrudButton/CrudButton";
 import Axios from "axios";
 import { useState } from "react";
 
-
-
 const Add = () => {
 
     const [coffeeFieldAdd, setCoffeeFieldAdd] = useState({
@@ -18,7 +16,6 @@ const Add = () => {
         infoVideo: ""
     });
 
-    
     const addButton = () => {
         console.log(coffeeFieldAdd);
         const url = "http://localhost:3001/coffees";
@@ -31,8 +28,6 @@ const Add = () => {
             })
     };
     
-
-
     return(
         <div>
             <div className= "addHeader">
