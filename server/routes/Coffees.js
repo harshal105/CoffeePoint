@@ -17,7 +17,8 @@ router
     })
 
     .post(async (req,res) => {
-    
+        
+        console.log(req.body);
         const newCoffee = new CoffeeModel({
             name: req.body.name,
             country: req.body.country,

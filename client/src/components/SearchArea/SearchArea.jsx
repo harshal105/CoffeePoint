@@ -3,7 +3,7 @@ import "./SearchArea.css";
 import FunctionButton from "../../components/FunctionButton/FunctionButton";
 import CoffeeCard from "../../components/CoffeeCard/CoffeeCard";
 import Axios from "axios"; 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SearchArea = () => {
@@ -13,6 +13,9 @@ const SearchArea = () => {
     const [foundVal, setFoundVal] = useState(null);
     let navigate = useNavigate();
     
+    
+   
+
     const handleSearch = () => {
 
         Axios.get("http://localhost:3001/coffees/" + inputField)
@@ -24,6 +27,7 @@ const SearchArea = () => {
             )} 
             else {
                 setFoundVal (false);
+                alert("Sorry no coffee was found under that name, try searching for a different name");
             }
             console.log(response)
         }).catch(e => {
@@ -79,11 +83,11 @@ const SearchArea = () => {
                 howToMake={coffeeVal.howToMake}
                 infoVideo={coffeeVal.infoVideo}/>
             : <CoffeeCard 
-                name="Not Found"
-                country="Not Found"
-                date="Not Found"
-                howToMake="Not Found"
-                infoVideo="Not Found"/>
+                name=""
+                country=""
+                date=""
+                howToMake=""
+                infoVideo=""/>
             }
         </div>
     )

@@ -1,7 +1,7 @@
 import React from "react";
 import "./CrudCard.css";
 
-const CrudCard = () => {
+const CrudCard = (props) => {
     return(
         <div className="CrudCard">
             <div className="infoInCrudCard">
@@ -11,6 +11,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, name: event.target.value })
+                    }}
                     > 
                     </input>
                 </div>
@@ -21,6 +24,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, country: event.target.value })
+                    }}
                     > 
                     </input>
 
@@ -32,6 +38,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, date: event.target.value })
+                    }}
                     > 
                     </input>
 
@@ -43,6 +52,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, picture: event.target.value })
+                    }}
                     > 
                     </input>
                 </div>
@@ -53,6 +65,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, howToMake: event.target.value })
+                    }}
                     > 
                     </input>
 
@@ -64,6 +79,9 @@ const CrudCard = () => {
                     className="inputsCrudCard" 
                     type="text" 
                     placeholder=""
+                    onChange={(event) => {
+                        props.setCoffeeInformation({ ...props.coffeeInformation, infoVideo: event.target.value })
+                    }}
                     > 
                     </input>
                 </div>
