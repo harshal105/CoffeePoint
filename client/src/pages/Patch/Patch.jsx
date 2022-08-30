@@ -2,13 +2,40 @@ import React from "react";
 import "./Patch.css";
 import CrudCard from "../../components/CrudCard/CrudCard";
 import CrudButton from "../../components/CrudButton/CrudButton";
+import { useState } from "react";
+import  Axios  from "axios";
 
 const Patch = () => {
     
-    
-    
-    
-    
+    const [coffeeFieldPatch, setCoffeeFieldPatch] = useState({
+        name: "",
+        country: "",
+        date: null,
+        picture: "",
+        howToMake: "",
+        infoVideo: ""
+    });
+
+    const [patchName, setPatchName] = useState("");
+
+    const patchButton = () => {
+        const url = "http://localhost:3001/coffees/" + patchName;
+        console.log(url);
+
+        Object.keys(coffeeFieldPatch).forEach(key => {
+            if (coffeeFieldPatch[key] === '' || coffeeFieldPatch[key] == null) {
+              delete coffeeFieldPatch[key];
+            }
+          });
+
+        Axios.patch(url, coffeeFieldPatch)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch ((err) => {
+                console.log(err)
+            })
+    };
     
     return(
         <div>
@@ -21,12 +48,21 @@ const Patch = () => {
                         className="coffeePatchInput" 
                         type="text" 
                         placeholder="type coffee name here"
+                        onChange= {(event) => {
+                            setPatchName(event.target.value);
+                        }}
                         > 
                     </input>
                 </div>
             </div>
-            <CrudCard />
-            <CrudButton />
+            <CrudCard 
+                coffeeInformation = {coffeeFieldPatch}
+                setCoffeeInformation = {setCoffeeFieldPatch}
+            />
+            <CrudButton 
+                action={patchButton}
+                name="Patch"
+            />
         </div>
     )
 }

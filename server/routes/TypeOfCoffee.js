@@ -36,6 +36,7 @@ router
     })
 
     .patch((req,res) => {
+        
         CoffeeModel.updateOne({name: req.params.typeOfCoffee}, {$set: req.body}, 
             (err) => {
                 if (!err){
@@ -44,6 +45,7 @@ router
                     res.send(err);
                 }
         });
+        console.log(req);
     })
 
     .delete((req,res) => {
