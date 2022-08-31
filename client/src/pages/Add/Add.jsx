@@ -20,22 +20,11 @@ const Add = () => {
         console.log(coffeeFieldAdd);
         const url = "http://localhost:3001/coffees";
         var valid = true;
-
-        Object.keys(coffeeFieldAdd).forEach( (key) => {
-            if (key != "date"){
-                if (isNaN(coffeeFieldAdd[key]) === false){
-                    valid = false;
-                }
-            }
-            else{
-                if (isNaN(coffeeFieldAdd[key]) === true){
-                    console.log(coffeeFieldAdd[key]);
-                    valid = false;
-                }
-            } 
-        })
-
-
+        
+        if (isNaN(coffeeFieldAdd.date) === true){
+            valid = false;
+        }
+             
         if (valid === true) {
 
             Axios.post(url, coffeeFieldAdd)

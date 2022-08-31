@@ -22,22 +22,29 @@ const Patch = () => {
         const url = "http://localhost:3001/coffees/" + patchName;
         console.log(url);
 
-        Object.keys(coffeeFieldPatch).forEach(key => {
-            if (coffeeFieldPatch[key] === '' || coffeeFieldPatch[key] == null) {
-              delete coffeeFieldPatch[key];
-            }
-          });
+        var valid = true;
+        
+        if (isNaN(coffeeFieldPatch.date) === true){
+            valid = false;
+        }
+             
+        if (valid === true) {
 
-        Axios.patch(url, coffeeFieldPatch)
-            .then((response) => {
-                console.log(response);
-                if(response.data == "No"){
-                    alert("Sorry that coffee does not exist");
-                }
-            })
-            .catch ((err) => {
-                console.log(err)
-            })
+            Axios.patch(url, coffeeFieldPatch)
+                .then((response) => {
+                    console.log(response);
+                    if(response.data == "No"){
+                        alert("Sorry that coffee does not exist");
+                    }
+                })
+                .catch ((err) => {
+                    console.log(err)
+                })
+        }
+
+        else{
+            alert("Invalid values placed in one or more fields");
+        }
     };
     
     return(

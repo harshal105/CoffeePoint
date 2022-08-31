@@ -21,16 +21,31 @@ const Put = () => {
 
     const putButton = () => {
         const url = "http://localhost:3001/coffees/" + putName;
-        Axios.put(url, coffeeFieldPut)
-            .then((response) => {
-                console.log(response);
-                if(response.data == "No"){
-                    alert("Sorry that coffee does not exist");
-                }
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+        
+        var valid = true;
+        
+        if (isNaN(coffeeFieldPut.date) === true){
+            valid = false;
+        }
+             
+        if (valid === true) {
+        
+        
+            Axios.put(url, coffeeFieldPut)
+                .then((response) => {
+                    console.log(response);
+                    if(response.data == "No"){
+                        alert("Sorry that coffee does not exist");
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+        } else{
+            alert("Invalid values placed in one or more fields");
+
+        }
+
     }
 
     return(
