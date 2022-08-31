@@ -16,21 +16,31 @@ router
         });
     })
 
-    .post(async (req,res) => {
+    .post((req,res) => {
         
-        console.log(req.body);
-        const newCoffee = new CoffeeModel({
-            name: req.body.name,
-            country: req.body.country,
-            date: req.body.date,
-            picture: req.body.picture,
-            howToMake: req.body.howToMake,
-            infoVideo: req.body.infoVideo
-        });
-    
-        await newCoffee.save();
-    
-        res.json("Successfully Added");
+
+        CoffeeModel.findOne({name: req.body.name}, (err, foundCoffee) => {
+            if (!foundCoffee){
+                const newCoffee = new CoffeeModel({
+                    name: req.body.name,
+                    country: req.body.country,
+                    date: req.body.date,
+                    picture: req.body.picture,
+                    howToMake: req.body.howToMake,
+                    infoVideo: req.body.infoVideo
+                });
+            
+                newCoffee.save();
+            
+                res.json("Successfully Added");
+            }
+
+            else{
+                res.json("No")
+            }
+        })
+
+        
     })
 
     .delete((req,res) =>{

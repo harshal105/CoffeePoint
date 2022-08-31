@@ -19,13 +19,40 @@ const Add = () => {
     const addButton = () => {
         console.log(coffeeFieldAdd);
         const url = "http://localhost:3001/coffees";
-        Axios.post(url, coffeeFieldAdd)
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+        var valid = true;
+
+        Object.keys(coffeeFieldAdd).forEach( (key) => {
+            if (key != "date"){
+                if (isNaN(coffeeFieldAdd[key]) === false){
+                    valid = false;
+                }
+            }
+            else{
+                if (isNaN(coffeeFieldAdd[key]) === true){
+                    console.log(coffeeFieldAdd[key]);
+                    valid = false;
+                }
+            } 
+        })
+
+
+        if (valid === true) {
+
+            Axios.post(url, coffeeFieldAdd)
+                .then((response) => {
+                    console.log(response);
+                    if(response.data == "No"){
+                        alert("Sorry that coffee already exists, try adding a different one!");
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                })
+        }
+
+        else {
+            alert("Invalid values placed in one or more fields");
+        }
     };
     
     return(

@@ -30,7 +30,10 @@ const Patch = () => {
 
         Axios.patch(url, coffeeFieldPatch)
             .then((response) => {
-                console.log(response)
+                console.log(response);
+                if(response.data == "No"){
+                    alert("Sorry that coffee does not exist");
+                }
             })
             .catch ((err) => {
                 console.log(err)

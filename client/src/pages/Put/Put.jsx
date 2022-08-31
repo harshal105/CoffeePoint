@@ -23,7 +23,10 @@ const Put = () => {
         const url = "http://localhost:3001/coffees/" + putName;
         Axios.put(url, coffeeFieldPut)
             .then((response) => {
-                console.log(response)
+                console.log(response);
+                if(response.data == "No"){
+                    alert("Sorry that coffee does not exist");
+                }
             })
             .catch((err) => {
                 console.log(err);
