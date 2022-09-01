@@ -82,6 +82,7 @@ const SearchArea = () => {
                 name={coffeeVal.name}
                 country={coffeeVal.country}
                 date={coffeeVal.date}
+                picture={coffeeVal.picture}
                 howToMake={coffeeVal.howToMake}
                 infoVideo={coffeeVal.infoVideo}/>
             : <p></p>

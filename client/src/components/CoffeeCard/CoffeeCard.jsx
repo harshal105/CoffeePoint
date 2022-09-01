@@ -91,7 +91,7 @@ const CoffeeCard = (props) => {
                     {
                         props.infoVideo != "" && props.infoVideo != null
 
-                        ? <a href={props.infoVideo}><button 
+                        ? <a href={props.infoVideo} ><button 
                             className="coffeeResultButton"> 
                             Click Me !
                         </button>  </a>
