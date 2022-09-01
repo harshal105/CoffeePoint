@@ -69,7 +69,7 @@ const CoffeeCard = (props) => {
                         props.howToMake != "" && props.howToMake != null
 
                         ?
-                        <a href={props.howToMake}>
+                        <a href={props.howToMake} target="_blank">
                         <button 
                             className="coffeeResultButton">
                             
@@ -91,7 +91,7 @@ const CoffeeCard = (props) => {
                     {
                         props.infoVideo != "" && props.infoVideo != null
 
-                        ? <a href={props.infoVideo} ><button 
+                        ? <a href={props.infoVideo} target="_blank"><button 
                             className="coffeeResultButton"> 
                             Click Me !
                         </button>  </a>
