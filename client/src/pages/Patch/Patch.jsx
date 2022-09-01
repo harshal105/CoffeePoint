@@ -27,8 +27,17 @@ const Patch = () => {
         if (isNaN(coffeeFieldPatch.date) === true){
             valid = false;
         }
+
+
+
              
         if (valid === true) {
+
+            Object.keys(coffeeFieldPatch).forEach(key => {
+                if(coffeeFieldPatch[key] == "" || coffeeFieldPatch[key] == null){
+                    delete coffeeFieldPatch[key];
+                }
+            })
 
             Axios.patch(url, coffeeFieldPatch)
                 .then((response) => {

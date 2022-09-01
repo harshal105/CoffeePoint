@@ -18,21 +18,23 @@ const SearchArea = () => {
 
     const handleSearch = () => {
 
-        Axios.get("http://localhost:3001/coffees/" + inputField)
-        .then((response) => {
-            if(response.data != "Sorry no coffee was found under that name"){
-                setFoundVal (true);
-                setCoffeeVal(
-                    response.data
-            )} 
-            else {
-                setFoundVal (false);
-                alert("Sorry no coffee was found under that name, try searching for a different name");
-            }
-            console.log(response)
-        }).catch(e => {
-            console.log(e);
-        })
+        if (inputField != null && inputField != ""){
+            Axios.get("http://localhost:3001/coffees/" + inputField)
+            .then((response) => {
+                if(response.data != "Sorry no coffee was found under that name"){
+                    setFoundVal (true);
+                    setCoffeeVal(
+                        response.data
+                )} 
+                else {
+                    setFoundVal (false);
+                    alert("Sorry no coffee was found under that name, try searching for a different name");
+                }
+                console.log(response)
+            }).catch(e => {
+                console.log(e);
+            })
+        }
 
     }
     return(
@@ -82,12 +84,7 @@ const SearchArea = () => {
                 date={coffeeVal.date}
                 howToMake={coffeeVal.howToMake}
                 infoVideo={coffeeVal.infoVideo}/>
-            : <CoffeeCard 
-                name=""
-                country=""
-                date=""
-                howToMake=""
-                infoVideo=""/>
+            : <p></p>
             }
         </div>
     )
