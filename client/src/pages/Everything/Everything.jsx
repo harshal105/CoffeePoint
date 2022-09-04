@@ -46,9 +46,6 @@ const Everything = () => {
                     )
                 })
             }
-    
-                
-            
         </div>
     )
 }
