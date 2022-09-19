@@ -44,7 +44,7 @@ const SearchArea = () => {
                 <input 
                     className="searchField common" 
                     type="text" 
-                    placeholder=""
+                    placeholder="E.g. Latte"
                     onChange = {(event) => {
                         setInputField(event.target.value);
                     }}
