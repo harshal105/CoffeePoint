@@ -19,7 +19,7 @@ const SearchArea = () => {
     const handleSearch = () => {
 
         if (inputField != null && inputField != ""){
-            Axios.get("http://localhost:3001/coffees/" + inputField)
+            Axios.get("https://coffeehubofficial.herokuapp.com/coffees/" + inputField)
             .then((response) => {
                 if(response.data != "Sorry no coffee was found under that name"){
                     setFoundVal (true);
