@@ -18,7 +18,7 @@ const Add = () => {
 
     const addButton = () => {
         console.log(coffeeFieldAdd);
-        const url = "http://localhost:3001/coffees";
+        const url = "https://coffeehubofficial.herokuapp.com/coffees";
         var valid = true;
         
         if (isNaN(coffeeFieldAdd.date) === true){

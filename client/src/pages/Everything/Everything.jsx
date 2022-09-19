@@ -7,7 +7,7 @@ import CoffeeCard from "../../components/CoffeeCard/CoffeeCard";
 const Everything = () => {
     
     const [allCoffeeInfo, setAllCoffeeInfo] = useState([]);
-    const url = "http://localhost:3001/coffees";
+    const url = "https://coffeehubofficial.herokuapp.com/coffees";
     
     useEffect(() => {
         const getAllCoffees =  async () => {
