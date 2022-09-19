@@ -27,7 +27,7 @@ const Everything = () => {
     return(
         <div className="everythingDiv">
             <div className="everythingHeader">
-                <h1> CoffeeHub Gallery </h1>
+                <h1> CoffeePoint Gallery </h1>
                 <p className="sentenceBeg"> Below are all of the different coffees we have in our database!</p>
             </div>
             {
