@@ -8,7 +8,7 @@ const Header = () =>{
     return(
     <div className="container">
         <img className= "logo" src="/images/coffee-cup.png" alt="Nopic"/>
-        <h1> CoffeeHub </h1>
+        <h1> CoffeePoint </h1>
         <span class='line'></span>
 
     </div>
