@@ -13,4 +13,3 @@ I built this project as a way to understand more about web development, and put 
 I was able to learn a lot about how web applications are built, and am hoping to continue to learn more!
 
 ## Check out the project here! 
-https://coffee-point.netlify.app/ 
