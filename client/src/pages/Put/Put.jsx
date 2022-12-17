@@ -20,7 +20,7 @@ const Put = () => {
     const [putName, setPutName] = useState("");
 
     const putButton = () => {
-        const url = "https://coffeehubofficial.herokuapp.com/coffees" + putName;
+        const url = "http://localhost:3001/coffees" + putName;
         
         var valid = true;
         

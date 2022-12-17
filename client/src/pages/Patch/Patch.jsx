@@ -19,7 +19,7 @@ const Patch = () => {
     const [patchName, setPatchName] = useState("");
 
     const patchButton = () => {
-        const url = "https://coffeehubofficial.herokuapp.com/coffees/" + patchName;
+        const url = "http://localhost:3001/coffees/" + patchName;
         console.log(url);
 
         var valid = true;

@@ -9,7 +9,7 @@ const Delete = () => {
     const [deleteName, setDeleteName] = useState("");
     
     const deleteButton = () => {
-        const url = "https://coffeehubofficial.herokuapp.com/coffees/" + deleteName;
+        const url = "http://localhost:3001/coffees/" + deleteName;
         Axios.delete(url)
             .then((response) => {
                 console.log(response);
