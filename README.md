@@ -21,3 +21,21 @@ I was able to learn a lot about how web applications are built, and am hoping to
 ### Add Page
 
 ![addPage](https://user-images.githubusercontent.com/64620385/208265498-7844e4ca-7869-4050-97ca-cbfed138373d.png)
+
+### Patch Page
+
+![patchPage](https://user-images.githubusercontent.com/64620385/208265616-b8e5317d-3ee6-456d-8afd-75185907d5ad.png)
+
+### Put Page
+
+![putPage](https://user-images.githubusercontent.com/64620385/208265618-92b32c9e-3733-4f0b-b082-e873db2a28c1.png)
+
+
+### Delete Page
+
+![deletePage](https://user-images.githubusercontent.com/64620385/208265621-383f4caf-e497-4db2-b389-050eced28921.png)
+
+
+### Gallery
+
+![gallery](https://user-images.githubusercontent.com/64620385/208265623-544ca6c6-b92e-48b6-9dc5-446094b96c8c.png)
