@@ -9,8 +9,8 @@ The app was built using the MERN stack, where a REST API was created on the back
 database. The front end was built using React, and styled using vanilla CSS. 
 
 ## Motivation
-I built this project as a way to understand more about web development, and put some of what I knew to practical use. While this isn't the most complex application,
-I was able to learn a lot about how web applications are built, and am hoping to continue to learn more!
+I built this project as a way to understand more about web development, and put some of what I knew to practical use. I was also curious on how the frontend and 
+the backend of applications communicate, and this project allowed me to learn more about creating APIs that allowed information to be transferred from the client to the backend. I'm hoping with the knowledge to be able to create more complex applications in the future to challenege my understanding of full-stack development
 
 ## Check out the project here!
 
