@@ -10,7 +10,7 @@ database. The front end was built using React, and styled using vanilla CSS.
 
 ## Motivation
 I built this project as a way to understand more about web development, and put some of what I knew to practical use. I was also curious on how the frontend and 
-the backend of applications communicate, and this project allowed me to learn more about creating APIs that allowed information to be transferred from the client to the backend. I'm hoping with the knowledge to be able to create more complex applications in the future to challenege my understanding of full-stack development
+the backend of applications communicate, and this project allowed me to learn more about creating APIs that allowed information to be transferred from the client to the backend. I'm hoping with the knowledge to be able to create more complex applications in the future to challenge my understanding of full-stack development.
 
 ## Check out the project here!
 
