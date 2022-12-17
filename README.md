@@ -18,3 +18,6 @@ I was able to learn a lot about how web applications are built, and am hoping to
 
 ![homePage](https://user-images.githubusercontent.com/64620385/208265390-400175a6-9714-4e7a-96bb-69be01f219f3.png)
 
+### Add Page
+
+![addPage](https://user-images.githubusercontent.com/64620385/208265498-7844e4ca-7869-4050-97ca-cbfed138373d.png)
